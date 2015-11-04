@@ -13,10 +13,48 @@ Create mobile application with [ionic](http://www.ionicframework.com) and [backa
 
   <b>user</b>: sample@ionic.com
 
-  pwd: backand
+  <b>pwd</b>: backand
 
-4 - Enjoy your sample application, with backand at server side and ionic at frontend.
+4 - Enjoy your mobile application, with backand at server side and full CRUD commands to server.
 
+5 - Want to customize data model or change authorization?
+create a free personal application at [backand.com](https://www.backand.com/apps/#/sign_up)
 
-5 - Want to customize data model or change authorization,
-    create a personal application at [backand.com](https://www.backand.com/apps/#/sign_up)
+6 - Use following model (or just keep the default Model):
+
+    [
+      {
+        "name": "items",
+        "fields": {
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "text"
+          },
+          "user": {
+            "object": "users"
+          }
+        }
+      },
+      {
+        "name": "users",
+        "fields": {
+          "email": {
+            "type": "string"
+          },
+          "firstName": {
+            "type": "string"
+          },
+          "lastName": {
+            "type": "string"
+          },
+          "items": {
+            "collection": "items",
+            "via": "user"
+          }
+        }
+      }
+    ]
+7 - change application name in  /js/controllers.js file at line 7
+to your new application name.
