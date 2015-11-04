@@ -51,7 +51,7 @@ create a free personal application at [backand.com](https://www.backand.com/apps
           },
           "items": {
             "collection": "items",
-            "via": "user"
+            "via": "user" 
           }
         }
       }
