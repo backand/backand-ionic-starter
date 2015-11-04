@@ -1,2 +1,2 @@
 # backand-ionic-starter
-create mobile application with ionic and backand
+Create mobile application with [ionic](www.ionicframework.com) and [backand](www.backand.com").
