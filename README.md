@@ -11,7 +11,7 @@ Create mobile application with [ionic](http://www.ionicframework.com) and [backa
 
 3 - Login with default user and password:
 
-  <b>user</b>: sample@ionic.com
+  <b>user</b>: ionic@backand.com
 
   <b>pwd</b>: backand
 
