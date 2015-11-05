@@ -2,6 +2,8 @@
     <ion-content class="padding has-header">
         <div class="bar bar-header">
             <span ng-click="login.signout()" class="cancel-create">sign out</span>
+            <button class="button button-calm" ng-click="login.anonymousLogin()">Guest login</button>
+
         </div>
         <div class="bar bar-subheader">
             <form ng-submit="login.signin()">

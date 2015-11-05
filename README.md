@@ -3,13 +3,14 @@ Create mobile application with [ionic](http://www.ionicframework.com) and [backa
 
 1- To run starter, download zip and run ionic start:
 
-    ionic start [yourapp] https://github.com/backand/backand-ionic-starter
+    ionic start myApp https://github.com/backand/backand-ionic-starter
+    cd myApp
 
 2 - Run with ionic serve function
 
     ionic serve
 
-3 - Login with default user and password:
+3 - Login as guest or with  user and password:
 
   <b>user</b>: ionic@backand.com
 
@@ -56,5 +57,5 @@ create a free personal application at [backand.com](https://www.backand.com/apps
         }
       }
     ]
-7 - change application name in  /js/controllers.js file at line 7
+7 - change application name in  /js/app.js file at line 26
 to your new application name.

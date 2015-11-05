@@ -3,36 +3,45 @@ angular.module('SimpleRESTIonic.controllers', [])
     .controller('LoginCtrl', function (Backand, $state, $rootScope, LoginService) {
         var login = this;
 
-        // change here to your appName
-        var appName = 'ionicstarter';
-
         function signin() {
-            LoginService.signin(login.email, login.password, appName)
+            LoginService.signin(login.email, login.password)
                 .then(function () {
-                    $rootScope.$broadcast('authorized');
-                    $state.go('tab.dashboard');
+                    onLogin();
                 }, function (error) {
                     console.log(error)
                 })
         }
 
+        function anonymousLogin(){
+            LoginService.anonymousLogin();
+            onLogin();
+        }
+
+        function onLogin(){
+            $rootScope.$broadcast('authorized');
+            $state.go('tab.dashboard');
+        }
+
         function signout() {
             LoginService.signout()
                 .then(function () {
-                    $state.go('tab.login');
+                    //$state.go('tab.login');
+                    $rootScope.$broadcast('logout');
+                    $state.go($state.current, {}, {reload: true});
                 })
 
         }
 
         login.signin = signin;
         login.signout = signout;
+        login.anonymousLogin = anonymousLogin;
     })
 
     .controller('DashboardCtrl', function (ItemsModel, $rootScope) {
         var vm = this;
 
         function goToBackand() {
-            window.location = 'http://www.backand.com';
+            window.location = 'http://docs.backand.com';
         }
 
         function getAll() {
@@ -40,6 +49,10 @@ angular.module('SimpleRESTIonic.controllers', [])
                 .then(function (result) {
                     vm.data = result.data.data;
                 });
+        }
+
+        function clearData(){
+            vm.data = null;
         }
 
         function create(object) {
@@ -102,10 +115,20 @@ angular.module('SimpleRESTIonic.controllers', [])
         vm.cancelEditing = cancelEditing;
         vm.cancelCreate = cancelCreate;
         vm.goToBackand = goToBackand;
+        vm.isAuthorized = false;
 
         $rootScope.$on('authorized', function () {
+            vm.isAuthorized = true;
             getAll();
         });
+
+        $rootScope.$on('logout', function () {
+            clearData();
+        });
+
+        if(!vm.isAuthorized){
+            $rootScope.$broadcast('logout');
+        }
 
         initCreateForm();
         getAll();
