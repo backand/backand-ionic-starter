@@ -22,14 +22,9 @@ angular.module('SimpleRESTIonic', ['ionic', 'backand', 'SimpleRESTIonic.controll
     })
     .config(function (BackandProvider, $stateProvider, $urlRouterProvider, $httpProvider) {
 
-        // change here to your appName
-        var appName = 'ionicstarter';
-
-        // token is for anonymous login. see http://docs.backand.com/en/latest/apidocs/security/index.html#anonymous-access
-        var token = '86d665e8-bb1c-4290-a124-2a80baac405d';
-
-        BackandProvider.setAppName(appName);
-        BackandProvider.setAnonymousToken(token);
+        BackandProvider.setAppName('ionicstarter'); // change here to your app name
+        BackandProvider.setSignUpToken('eeeac4e6-b7bc-4552-88ff-a424c50ead61'); //token that enable sign up. see http://docs.backand.com/en/latest/apidocs/security/index.html#sign-up
+        BackandProvider.setAnonymousToken('86d665e8-bb1c-4290-a124-2a80baac405d'); // token is for anonymous login. see http://docs.backand.com/en/latest/apidocs/security/index.html#anonymous-access
 
         $stateProvider
             // setup an abstract state for the tabs directive
