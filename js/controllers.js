@@ -41,7 +41,7 @@ angular.module('SimpleRESTIonic.controllers', [])
         var vm = this;
 
         function goToBackand() {
-            window.location = 'http://docs.backand.com';
+            window.location = 'https://www.backand.com';
         }
 
         function getAll() {
