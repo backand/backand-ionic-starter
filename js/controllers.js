@@ -26,6 +26,8 @@ angular.module('SimpleRESTIonic.controllers', [])
             LoginService.signout()
                 .then(function () {
                     //$state.go('tab.login');
+                    login.email = '';
+                    login.password = '';
                     $rootScope.$broadcast('logout');
                     $state.go($state.current, {}, {reload: true});
                 })
