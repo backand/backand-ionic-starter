@@ -19,6 +19,8 @@ angular.module('SimpleRESTIonic.controllers', [])
 
         function onLogin(){
             $rootScope.$broadcast('authorized');
+            login.email = '';
+            login.password = '';            
             $state.go('tab.dashboard');
         }
 
