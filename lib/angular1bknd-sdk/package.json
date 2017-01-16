@@ -1,0 +1,98 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "https://github.com/backand/angular1bknd-sdk.git",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "https://github.com/backand/angular1bknd-sdk.git",
+        "spec": "git+https://github.com/backand/angular1bknd-sdk.git",
+        "type": "hosted",
+        "hosted": {
+          "type": "github",
+          "ssh": "git@github.com:backand/angular1bknd-sdk.git",
+          "sshUrl": "git+ssh://git@github.com/backand/angular1bknd-sdk.git",
+          "httpsUrl": "git+https://github.com/backand/angular1bknd-sdk.git",
+          "gitUrl": "git://github.com/backand/angular1bknd-sdk.git",
+          "shortcut": "github:backand/angular1bknd-sdk",
+          "directUrl": "https://raw.githubusercontent.com/backand/angular1bknd-sdk/master/package.json"
+        }
+      },
+      "/Users/itay/dev/ionic/myApp"
+    ]
+  ],
+  "_from": "git+https://github.com/backand/angular1bknd-sdk.git",
+  "_id": "angular1bknd-sdk@1.1.0",
+  "_inCache": true,
+  "_location": "/angular1bknd-sdk",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "https://github.com/backand/angular1bknd-sdk.git",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "https://github.com/backand/angular1bknd-sdk.git",
+    "spec": "git+https://github.com/backand/angular1bknd-sdk.git",
+    "type": "hosted",
+    "hosted": {
+      "type": "github",
+      "ssh": "git@github.com:backand/angular1bknd-sdk.git",
+      "sshUrl": "git+ssh://git@github.com/backand/angular1bknd-sdk.git",
+      "httpsUrl": "git+https://github.com/backand/angular1bknd-sdk.git",
+      "gitUrl": "git://github.com/backand/angular1bknd-sdk.git",
+      "shortcut": "github:backand/angular1bknd-sdk",
+      "directUrl": "https://raw.githubusercontent.com/backand/angular1bknd-sdk/master/package.json"
+    }
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "git+https://github.com/backand/angular1bknd-sdk.git#757268bf900bb1e56be283714ccec2033f733784",
+  "_shasum": "6f2eaee0bd2c55ebac0e0bd4dffa6b13e3e59f3c",
+  "_shrinkwrap": null,
+  "_spec": "https://github.com/backand/angular1bknd-sdk.git",
+  "_where": "/Users/itay/dev/ionic/myApp",
+  "author": {
+    "name": "Backand"
+  },
+  "bugs": {
+    "url": "https://github.com/backand/angular1bknd-sdk/issues"
+  },
+  "dependencies": {
+    "angular": "^1.6.1",
+    "vanillabknd-sdk": "git+https://github.com/backand/vanillabknd-sdk.git#index"
+  },
+  "description": "Backand SDK for Angular 1",
+  "devDependencies": {},
+  "directories": {
+    "example": "example"
+  },
+  "files": [
+    "src",
+    "example"
+  ],
+  "gitHead": "757268bf900bb1e56be283714ccec2033f733784",
+  "homepage": "https://github.com/backand/angular1bknd-sdk#readme",
+  "keywords": [
+    "Backand",
+    "backend",
+    "backend sdk",
+    "backend js",
+    "backend javascript",
+    "angular1bknd-sdk",
+    "backend angular sdk"
+  ],
+  "license": "MIT",
+  "main": "./src/backand.provider.js",
+  "name": "angular1bknd-sdk",
+  "optionalDependencies": {},
+  "readme": "angular1bknd-sdk\n===\n\n>  Backand SDK for [Angularjs1](https://angularjs.org/).\nThis SDK enables you to communicate comfortably and quickly with your Backand app.\nIt wraps the [vanillabknd-sdk](https://github.com/backand/vanillabknd-sdk) to allow easier work on projects involving Angularjs1.\n\n\n## License\n\n  [MIT](LICENSE)\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/backand/angular1bknd-sdk.git"
+  },
+  "scripts": {},
+  "version": "1.1.0"
+}

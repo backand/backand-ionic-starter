@@ -12,33 +12,104 @@ angular.module('SimpleRESTIonic.controllers', [])
                 })
         }
 
-        function anonymousLogin(){
-            LoginService.anonymousLogin();
-            onLogin();
+        function anonymousLogin() {
+            LoginService.anonymousLogin().then(function(){
+              onLogin('Guest');
+            });
+
         }
 
-        function onLogin(){
+        function onLogin(username) {
             $rootScope.$broadcast('authorized');
-            login.email = '';
-            login.password = '';            
             $state.go('tab.dashboard');
+            login.username = username;
+            if(!username){
+              Backand.user.getUsername().then(function(user){
+                if(user)
+                  login.username = user.data;
+              });
+            }
         }
 
         function signout() {
             LoginService.signout()
                 .then(function () {
                     //$state.go('tab.login');
-                    login.email = '';
-                    login.password = '';
                     $rootScope.$broadcast('logout');
                     $state.go($state.current, {}, {reload: true});
                 })
 
         }
 
+        function socialSignIn(provider) {
+            LoginService.socialSignIn(provider)
+                .then(onValidLogin, onErrorInLogin);
+
+        }
+
+        function socialSignUp(provider) {
+            LoginService.socialSignUp(provider)
+                .then(onValidLogin, onErrorInLogin);
+
+        }
+
+        onValidLogin = function(response){
+            onLogin();
+            login.username = response.data || login.username;
+        }
+
+        onErrorInLogin = function(rejection){
+            login.error = rejection.data;
+            $rootScope.$broadcast('logout');
+
+        }
+
+
+        login.username = '';
+        login.error = '';
         login.signin = signin;
         login.signout = signout;
         login.anonymousLogin = anonymousLogin;
+        login.socialSignup = socialSignUp;
+        login.socialSignin = socialSignIn;
+
+    })
+
+    .controller('SignUpCtrl', function (Backand, $state, $rootScope, LoginService) {
+        var vm = this;
+
+        vm.signup = signUp;
+
+        function signUp(){
+            vm.errorMessage = '';
+
+            LoginService.signup(vm.firstName, vm.lastName, vm.email, vm.password, vm.again)
+                .then(function (response) {
+                    // success
+                    onLogin();
+                }, function (reason) {
+                    if(reason.data.error_description !== undefined){
+                        vm.errorMessage = reason.data.error_description;
+                    }
+                    else{
+                        vm.errorMessage = reason.data;
+                    }
+                });
+        }
+
+
+        function onLogin() {
+            $rootScope.$broadcast('authorized');
+            $state.go('tab.dashboard');
+        }
+
+
+        vm.email = '';
+        vm.password ='';
+        vm.again = '';
+        vm.firstName = '';
+        vm.lastName = '';
+        vm.errorMessage = '';
     })
 
     .controller('DashboardCtrl', function (ItemsModel, $rootScope) {
@@ -51,11 +122,11 @@ angular.module('SimpleRESTIonic.controllers', [])
         function getAll() {
             ItemsModel.all()
                 .then(function (result) {
-                    vm.data = result.data.data;
+                    vm.data = result.data;
                 });
         }
 
-        function clearData(){
+        function clearData() {
             vm.data = null;
         }
 
@@ -130,7 +201,7 @@ angular.module('SimpleRESTIonic.controllers', [])
             clearData();
         });
 
-        if(!vm.isAuthorized){
+        if (!vm.isAuthorized) {
             $rootScope.$broadcast('logout');
         }
 

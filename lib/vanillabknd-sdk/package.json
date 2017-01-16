@@ -1,0 +1,118 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "vanillabknd-sdk@git+https://github.com/backand/vanillabknd-sdk.git#index",
+        "scope": null,
+        "escapedName": "vanillabknd-sdk",
+        "name": "vanillabknd-sdk",
+        "rawSpec": "git+https://github.com/backand/vanillabknd-sdk.git#index",
+        "spec": "git+https://github.com/backand/vanillabknd-sdk.git#index",
+        "type": "hosted",
+        "hosted": {
+          "type": "github",
+          "ssh": "git@github.com:backand/vanillabknd-sdk.git#index",
+          "sshUrl": "git+ssh://git@github.com/backand/vanillabknd-sdk.git#index",
+          "httpsUrl": "git+https://github.com/backand/vanillabknd-sdk.git#index",
+          "gitUrl": "git://github.com/backand/vanillabknd-sdk.git#index",
+          "shortcut": "github:backand/vanillabknd-sdk#index",
+          "directUrl": "https://raw.githubusercontent.com/backand/vanillabknd-sdk/index/package.json"
+        }
+      },
+      "/Users/itay/dev/ionic/myApp/node_modules/angular1bknd-sdk"
+    ]
+  ],
+  "_from": "git+https://github.com/backand/vanillabknd-sdk.git#index",
+  "_id": "vanillabknd-sdk@1.1.0",
+  "_inCache": true,
+  "_location": "/vanillabknd-sdk",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "vanillabknd-sdk@git+https://github.com/backand/vanillabknd-sdk.git#index",
+    "scope": null,
+    "escapedName": "vanillabknd-sdk",
+    "name": "vanillabknd-sdk",
+    "rawSpec": "git+https://github.com/backand/vanillabknd-sdk.git#index",
+    "spec": "git+https://github.com/backand/vanillabknd-sdk.git#index",
+    "type": "hosted",
+    "hosted": {
+      "type": "github",
+      "ssh": "git@github.com:backand/vanillabknd-sdk.git#index",
+      "sshUrl": "git+ssh://git@github.com/backand/vanillabknd-sdk.git#index",
+      "httpsUrl": "git+https://github.com/backand/vanillabknd-sdk.git#index",
+      "gitUrl": "git://github.com/backand/vanillabknd-sdk.git#index",
+      "shortcut": "github:backand/vanillabknd-sdk#index",
+      "directUrl": "https://raw.githubusercontent.com/backand/vanillabknd-sdk/index/package.json"
+    }
+  },
+  "_requiredBy": [
+    "/angular1bknd-sdk"
+  ],
+  "_resolved": "git+https://github.com/backand/vanillabknd-sdk.git#2342b678b77dc2f5e0565e2d3fedb41c4a44edbd",
+  "_shasum": "1ebcd96ab81cd53c7085b9bdc7d882a88c9c97aa",
+  "_shrinkwrap": null,
+  "_spec": "vanillabknd-sdk@git+https://github.com/backand/vanillabknd-sdk.git#index",
+  "_where": "/Users/itay/dev/ionic/myApp/node_modules/angular1bknd-sdk",
+  "author": {
+    "name": "Backand"
+  },
+  "bugs": {
+    "url": "https://github.com/backand/vanillabknd-sdk/issues"
+  },
+  "dependencies": {},
+  "description": "Backand SDK for JavaScript",
+  "devDependencies": {
+    "babel-plugin-transform-object-assign": "^6.8.0",
+    "babel-preset-es2015": "^6.9.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.1.1",
+    "chai": "^3.5.0",
+    "es6-promise": "^4.0.5",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-shell": "^0.5.2",
+    "gulp-sourcemaps": "^2.2.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-util": "^3.0.7",
+    "mocha": "^3.2.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "directories": {
+    "example": "example"
+  },
+  "files": [
+    "dist",
+    "example"
+  ],
+  "gitHead": "2342b678b77dc2f5e0565e2d3fedb41c4a44edbd",
+  "homepage": "https://github.com/backand/vanillabknd-sdk#readme",
+  "keywords": [
+    "Backand",
+    "backend",
+    "backend sdk",
+    "backend js",
+    "backend javascript",
+    "vanillabknd-sdk",
+    "backend vanilla sdk"
+  ],
+  "license": "MIT",
+  "main": "./dist/backand.js",
+  "name": "vanillabknd-sdk",
+  "optionalDependencies": {},
+  "readme": "vanillabknd-sdk\n===\n[![npm version](https://img.shields.io/npm/v/vanillabknd-sdk.svg?style=flat-square)](https://www.npmjs.org/package/vanillabknd-sdk)\n[![npm downloads](https://img.shields.io/npm/dt/vanillabknd-sdk.svg?style=flat-square)](http://npm-stat.com/charts.html?package=vanillabknd-sdk)\n\n>  Backand SDK for JavaScript.\nThis SDK enables you to communicate comfortably and quickly with your Backand app.\nIt requires zero configurations, no installations and no requirements.\n\n\n## Installation\n- NPM:\n```bash\n$ npm i -S vanillabknd-sdk\n```\n```javascript\nimport backand from 'vanillabknd-sdk'\n```\n- CDN:\n``` html\n<script src=\"https://cdn.backand.net/javascript/dist/1.0.1/backand.min.js\"></script>\n```\n- Download/Clone this repo and include `backand.min.js` in your project\n``` html\n<script src=\"backand.min.js\"></script>\n```\n\n\n## Browser Support\n\n![Chrome](https://raw.github.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/src/safari/safari_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/src/opera/opera_48x48.png) | ![Edge](https://raw.github.com/alrra/browser-logos/master/src/edge/edge_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/src/archive/internet-explorer_9-11/internet-explorer_9-11_48x48.png) |\n--- | --- | --- | --- | --- | --- |\nLatest ✔ | Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ | 10+ ✔ |\n\n\n## Quick start\n```javascript\nbackand.initiate({\n  appName: 'APP_NAME',\n  signUpToken: 'SIGNUP_TOKEN',\n  anonymousToken: 'ANONYMOUS_TOKEN'\n});\n\nbackand.service.useAnonymousAuth()\n  .then(() => {\n      return backand.service.getList('USERS');\n  })\n  .then((response) => {\n      console.log(response);\n  })\n  .catch(function(error){\n      console.log(error);\n  });\n\n```\n\n\n## API\n\n### backand namespace `window.backand`\nThe entry point to the sdk functions.\n\n#### backand.initiate():\nCreates a new backand instance.\n```javascript\nbackand.initiate(config);\n```\nconfig:\n- **appName** - Sets the name of your backand app (String) *required*\n- **anonymousToken** - Sets the anonymous token of your backand app (String) *required*\n- **signUpToken** - Sets the signup token of your backand app (String) *required*\n- **apiUrl** - Sets the API url of backand servers (String) (Default: 'https://api.backand.com') *optional*\n- **storagePrefix** - Sets prefix to use at the storage (String) (Default: 'BACKAND_') *optional*\n- **storageType** - Sets the storage type to use (local/session) (String) (Default: 'local') *optional*\n- **manageRefreshToken** - Determines whether the sdk should manage refresh tokens internally (Boolean) (Default: true) *optional*\n- **runSigninAfterSignup** - Determines whether the sdk should run signin after signup automatically (Boolean) (Default: true) *optional*\n- **runSocket** - Determines whether the sdk should run socket automatically (socketio-client required) (Boolean) (Default: false) *optional*\n- **socketUrl** - Sets the socket url of backand servers (String) (Default: 'https://socket.backand.com') *optional*\n- **isMobile** - Determines whether the sdk run on mobile platform (Boolean) (Default: false) *optional*\n\n#### Properties:\n| Name                     | Description                                              |\n|--------------------------|----------------------------------------------------------|\n| service                  | entry point to the sdk service functions                 |\n| constants                | entry point to the sdk constants (EVENTS, URLS, SOCIALS) |\n| helpers                  | entry point to the sdk helpers (filter, sort, exclude)   |\n| socket (runSocket: true) | entry point to the sdk socket functions (on)             |\n\n#### Methods backand.service:\n##### auth:\n| Name                                                                                 | Syntax                                                                                                                          |\n|--------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|\n| useAnonymousAuth (scb)                                                               | backand.service.useAnonymousAuth(data=>{})                                                                                      |\n| signin (username, password, scb, ecb)                                                | backand.service.signin(username, password, data=>{}, error=>{})                                                                 |\n| signup (email, password, confirmPassword, firstName, lastName, parameters, scb, ecb) | backand.service.signin(email, password, confirmPassword, firstName, lastName, parameters, data=>{}, error=>{})                  |\n| socialSignin (provider, scb, ecb, spec)                                              | backand.service.socialSignin(backand.constants.SOCIAL_PROVIDERS[provider].name, data=>{}, error=>{}, window.open - spec)        |\n| socialSignup (provider, email, scb, ecb, spec)                                       | backand.service.socialSignup(backand.constants.SOCIAL_PROVIDERS[provider].name, email, data=>{}, error=>{}, window.open - spec) |\n| requestResetPassword (username, scb, ecb)                                            | backand.service.requestResetPassword(username, data=>{}, error=>{})                                                             |\n| resetPassword (newPassword, resetToken, scb, ecb)                                    | backand.service.resetPassword(newPassword, resetToken, data=>{}, error=>{})                                                     |\n| changePassword (oldPassword, newPassword, scb, ecb)                                  | backand.service.changePassword(oldPassword, newPassword, data=>{}, error=>{})                                                   |\n| signout (scb)                                                                        | backand.service.signout(data=>{})                                                                                               |\n| getUserDetails(scb, ecb)                                                             | backand.service.getUserDetails(data=>{}, error=>{})                                                                             |\n##### crud:\n| Name                                        | Syntax                                                                |\n|---------------------------------------------|-----------------------------------------------------------------------|\n| getList (object, params, scb, ecb)          | backand.service.getList(object, params, data=>{}, error=>{})          |\n| create (object, data, params, scb, ecb)     | backand.service.create(object, data, params, data=>{}, error=>{})     |\n| getOne (object, id, params, scb, ecb)       | backand.service.getOne(object, id, params, data=>{}, error=>{})       |\n| update (object, id, data, params, scb, ecb) | backand.service.update(object, id, data, params, data=>{}, error=>{}) |\n| remove (object, id, scb, ecb)               | backand.service.remove(object, id, data=>{}, error=>{})               |\n##### files:\n| Name                                                          | Syntax                                                                                  |\n|---------------------------------------------------------------|-----------------------------------------------------------------------------------------|\n| uploadFile (object, fileAction, filename, filedata, scb, ecb) | backand.service.uploadFile(object, fileAction, filename, filedata, data=>{}, error=>{}) |\n| deleteFile (object, fileAction, filename, scb, ecb)           | backand.service.getList(object, fileAction, filename, data=>{}, error=>{})              |\n#### Methods backand.helpers:\n| Name                                        | Syntax                                                                             |\n|---------------------------------------------|------------------------------------------------------------------------------------|\n| filter: create (fieldName, operator, value) | backand.helpers.filter.create(fieldName, backand.helpers.filter.operators, value); |\n| sort: create (fieldName, order)             | backand.helpers.sort.create(fieldName, backand.helpers.sort.orders)                |\n#### Methods backand.socket:\n| Name              | Syntax                                 |\n|-------------------|----------------------------------------|\n| on(eventName, cb) | backand.socket.on(eventName, data=>{}) |\n\n**NOTE:**\n- **scb == Success Callback, ecb == Error Callback**\n- **All Methods return Promise -> .then() .catch() are available**\n\n#### Events:\n| Name    | Description           | Syntax                                                                     |\n|---------|-----------------------|----------------------------------------------------------------------------|\n| SIGNIN  | dispatched on signin  | window.addEventListener(backand.constants.EVENTS.SIGNIN, (e)=>{}, false);  |\n| SIGNOUT | dispatched on signout | window.addEventListener(backand.constants.EVENTS.SIGNOUT, (e)=>{}, false); |\n| SIGNUP  | dispatched on signup  | window.addEventListener(backand.constants.EVENTS.SIGNUP, (e)=>{}, false);  |\n\n\n## Examples\n***To view the demo web page, just run npm start - [example page](https://github.com/backand/vanillabknd-sdk/blob/master/example/).***\n\n\n## License\n\n  [MIT](LICENSE)\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/backand/vanillabknd-sdk.git"
+  },
+  "scripts": {
+    "build": "gulp",
+    "dev": "gulp watch",
+    "start": "start http://localhost:3000/ && cd ./example && node server.js",
+    "test": "start ./test/runner.html"
+  },
+  "types": "./dist/backand.d.ts",
+  "version": "1.1.0"
+}

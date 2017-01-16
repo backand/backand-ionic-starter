@@ -13,42 +13,33 @@ angular.module('SimpleRESTIonic.services', [])
 
     .service('ItemsModel', function ($http, Backand) {
         var service = this,
-            baseUrl = '/1/objects/',
-            objectName = 'items/';
-
-        function getUrl() {
-            return Backand.getApiUrl() + baseUrl + objectName;
-        }
-
-        function getUrlForId(id) {
-            return getUrl() + id;
-        }
+            objectName = 'items';
 
         service.all = function () {
-            return $http.get(getUrl());
+            return Backand.object.getList(objectName);
         };
 
         service.fetch = function (id) {
-            return $http.get(getUrlForId(id));
+            return Backand.object.getOne(objectName,id);
         };
 
         service.create = function (object) {
-            return $http.post(getUrl(), object);
+            return Backand.object.create(objectName,object);
         };
 
         service.update = function (id, object) {
-            return $http.put(getUrlForId(id), object);
+            return Backand.object.update(objectName, id, object);
         };
 
         service.delete = function (id) {
-            return $http.delete(getUrlForId(id));
+            return Backand.object.remove(objectName, id);
         };
     })
 
     .service('LoginService', function (Backand) {
         var service = this;
 
-        service.signin = function (email, password, appName) {
+        service.signin = function (email, password) {
             //call Backand for sign in
             return Backand.signin(email, password);
         };
@@ -56,9 +47,25 @@ angular.module('SimpleRESTIonic.services', [])
         service.anonymousLogin= function(){
             // don't have to do anything here,
             // because we set app token att app.js
-        }
+          return Backand.useAnonymousAuth();
+        };
+
+        service.socialSignIn = function (provider) {
+            return Backand.socialSignin(provider);
+        };
+
+        service.socialSignUp = function (provider) {
+            return Backand.socialSignup(provider);
+
+        };
 
         service.signout = function () {
             return Backand.signout();
         };
+
+        service.signup = function(firstName, lastName, email, password, confirmPassword){
+            //return Backand.signup(firstName, lastName, email, password, confirmPassword);
+            return Backand.signup(email, password, confirmPassword, firstName, lastName);
+        }
     });
+
